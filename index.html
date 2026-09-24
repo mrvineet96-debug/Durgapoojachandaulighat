@@ -1,1214 +1,991 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव — चंदौली</title>
-
-<style>
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,"Segoe UI","Noto Sans Devanagari",sans-serif;
-  background:#fff8ef;
-  color:#3b1608;
-}
-
-/* ===== HERO ===== */
-.hero{
-  position:relative;
-  overflow:hidden;
-  padding:55px 18px 65px;
-  text-align:center;
-  color:white;
-  background:
-    radial-gradient(circle at center,#ffcf33 0%,#e76b00 35%,#8b0000 75%);
-  border-bottom:5px solid #ffd700;
-}
-
-.hero:before{
-  content:"🪔  ॐ  🪔  ॐ  🪔  ॐ  🪔";
-  display:block;
-  font-size:25px;
-  color:#ffe88a;
-  margin-bottom:12px;
-}
-
-.hero h1{
-  margin:0;
-  font-size:clamp(28px,7vw,52px);
-  font-weight:900;
-  text-shadow:
-    0 3px 0 #7a1200,
-    0 5px 15px #0008;
-}
-
-.hero p{
-  margin:10px 6px;
-  font-size:18px;
-  font-weight:600;
-}
-
-.welcome{
-  color:#fff4b0;
-}
-
-/* ===== NAV ===== */
-.nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:#7f0000;
-  display:flex;
-  gap:6px;
-  justify-content:center;
-  flex-wrap:wrap;
-  padding:9px;
-  box-shadow:0 3px 15px #0005;
-}
-
-.nav a{
-  color:#fff;
-  padding:9px 13px;
-  border-radius:25px;
-  font-size:14px;
-  font-weight:700;
-  text-decoration:none;
-}
-
-.nav a:hover{
-  background:#d99b00;
-  color:#fff;
-}
-
-/* ===== MAIN ===== */
-.container{
-  max-width:950px;
-  margin:auto;
-  padding:20px;
-}
-
-.card{
-  background:#fff;
-  border-radius:20px;
-  padding:22px;
-  margin:18px 0;
-  box-shadow:0 7px 25px #7c2d1218;
-  border:1px solid #f3c46b;
-}
-
-h2{
-  color:#9a1f00;
-  margin-top:0;
-  text-align:center;
-}
-
-/* =========================================
-   BEAUTIFUL COUNTDOWN
-========================================= */
-
-.countdown-card{
-  position:relative;
-  overflow:hidden;
-  color:white;
-  border:3px solid #ffd700;
-  background:
-    radial-gradient(circle at 50% 0%,#ffcc33 0,#c93400 38%,#680000 100%);
-  box-shadow:
-    0 8px 30px #7a000055,
-    inset 0 0 30px #ffdf5733;
-}
-
-.countdown-card:before{
-  content:"";
-  position:absolute;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  background:#ffd70022;
-  top:-100px;
-  left:-80px;
-}
-
-.countdown-card:after{
-  content:"";
-  position:absolute;
-  width:200px;
-  height:200px;
-  border-radius:50%;
-  background:#ffd70018;
-  bottom:-100px;
-  right:-70px;
-}
-
-.count-title{
-  position:relative;
-  z-index:2;
-  text-align:center;
-}
-
-.count-title .om{
-  font-size:35px;
-  color:#ffd700;
-}
-
-.count-title h2{
-  color:#fff3a0;
-  text-shadow:0 2px 8px #0008;
-  margin:4px 0;
-}
-
-.count-subtitle{
-  color:#ffe7a0;
-  text-align:center;
-  font-size:15px;
-  margin-bottom:20px;
-}
-
-.countdown{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-}
-
-.countbox{
-  background:
-    linear-gradient(145deg,#fff7cf,#ffd75a);
-  color:#790f00;
-  border:2px solid #fff0a0;
-  border-radius:18px;
-  padding:16px 8px;
-  text-align:center;
-  box-shadow:
-    0 5px 15px #0005,
-    inset 0 0 12px #fff9;
-}
-
-.countbox b{
-  display:block;
-  font-size:clamp(28px,6vw,46px);
-  line-height:1;
-  font-weight:900;
-  color:#8b0000;
-  text-shadow:0 2px 0 #fff;
-}
-
-.countbox span{
-  display:block;
-  margin-top:8px;
-  font-weight:800;
-  font-size:14px;
-}
-
-.event-date{
-  position:relative;
-  z-index:2;
-  margin-top:20px;
-  padding:12px;
-  text-align:center;
-  border-radius:14px;
-  color:#fff;
-  background:#7b0000aa;
-  border:1px solid #ffd700;
-  font-weight:800;
-}
-
-.finished{
-  font-size:22px;
-  color:#ffe46b;
-}
-
-/* ===== AARTI ===== */
-.times{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-.time{
-  flex:1;
-  min-width:210px;
-  background:linear-gradient(135deg,#fff4c7,#ffe0a0);
-  border:2px solid #f0bd48;
-  border-radius:16px;
-  padding:20px;
-  text-align:center;
-  font-size:20px;
-  box-shadow:0 4px 12px #9a341220;
-}
-
-/* ===== SCHEDULE ===== */
-.schedule{
-  width:100%;
-  border-collapse:collapse;
-  overflow:hidden;
-}
-
-.schedule th,
-.schedule td{
-  padding:13px;
-  border-bottom:1px solid #fed7aa;
-  text-align:left;
-}
-
-.schedule th{
-  background:#fff0bd;
-  color:#8b1a00;
-}
-
-/* ===== DONATION ===== */
-.donation{
-  background:linear-gradient(135deg,#fff9e8,#ffe8bd);
-  border:2px solid #e5ad38;
-}
-
-.upi-box{
-  text-align:center;
-  background:#fff;
-  padding:18px;
-  border-radius:15px;
-  border:2px dashed #d99b00;
-}
-
-.upi-id{
-  display:block;
-  font-size:22px;
-  color:#9a1f00;
-  margin:8px 0 15px;
-  font-weight:900;
-  word-break:break-all;
-}
-
-button{
-  width:100%;
-  padding:15px;
-  border:0;
-  border-radius:13px;
-  background:linear-gradient(135deg,#a40000,#e65c00);
-  color:white;
-  font-size:17px;
-  font-weight:800;
-  cursor:pointer;
-  box-shadow:0 5px 12px #8b000044;
-}
-
-button:hover{
-  background:linear-gradient(135deg,#d99b00,#b33b00);
-}
-
-/* ===== GALLERY ===== */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:12px;
-}
-
-.gallery div{
-  overflow:hidden;
-  border-radius:16px;
-  border:3px solid #f0c45c;
-  background:#fff1d6;
-  box-shadow:0 5px 15px #0002;
-}
-
-.gallery img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-  display:block;
-  transition:transform .4s;
-}
-
-.gallery img:hover{
-  transform:scale(1.05);
-}
-
-/* ===== CONTACT ===== */
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:12px;
-}
-
-.contact{
-  background:#fff7ed;
-  padding:16px;
-  border-radius:14px;
-  border:1px solid #f0c45c;
-}
-
-/* ===== MEMBERS ===== */
-.members{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:10px;
-}
-
-.member{
-  background:linear-gradient(135deg,#fff8e5,#fff0d0);
-  padding:13px;
-  border-radius:12px;
-  border-left:4px solid #c2410c;
-}
-
-/* ===== FORM ===== */
-label{
-  display:block;
-  font-weight:700;
-  margin:14px 0 7px;
-}
-
-input[type=text],
-input[type=tel]{
-  width:100%;
-  padding:13px;
-  border:1px solid #e9b45a;
-  border-radius:10px;
-  font-size:16px;
-}
-
-.q{
-  padding:14px 0;
-  border-bottom:1px solid #fde2c0;
-}
-
-.opts{
-  display:flex;
-  gap:20px;
-  margin-top:8px;
-  flex-wrap:wrap;
-}
-
-.opts label{
-  font-weight:500;
-  margin:0;
-}
-
-.success{
-  display:none;
-  background:#ecfdf5;
-  color:#166534;
-  padding:14px;
-  border-radius:10px;
-  margin-top:12px;
-}
-
-/* ===== LINKS ===== */
-a{
-  color:#9a3412;
-  font-weight:700;
-  text-decoration:none;
-}
-
-.small{
-  font-size:13px;
-  color:#6b3b25;
-}
-
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:20px 0 35px;
-  color:#8b0000;
-  font-weight:700;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-
-  .container{
-    padding:12px;
-  }
-
-  .hero{
-    padding:40px 12px 48px;
-  }
-
-  .hero h1{
-    font-size:30px;
-  }
-
-  .countdown{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .countbox{
-    padding:14px 5px;
-  }
-
-  .countbox b{
-    font-size:32px;
-  }
-
-  .countbox span{
-    font-size:13px;
-  }
-
-  .nav a{
-    padding:8px 9px;
-    font-size:13px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>19th Durga Pooja & Navratri Mahotsav | Chandauli</title>
+
+  <meta name="description"
+        content="19th Durga Pooja and Navratri Mahotsav Chandauli - Aarti, Committee Members and Online Donation">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Sans Devanagari", "Mangal", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #fff4d6 0%, #fff8ec 35%, #fff 100%);
+      color: #4a1800;
+      line-height: 1.6;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: linear-gradient(90deg, #7b0000, #c62828, #7b0000);
+      color: #fff;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 14px;
+      letter-spacing: .5px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 650px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      background:
+        linear-gradient(rgba(91, 0, 0, .70), rgba(112, 0, 0, .78)),
+        radial-gradient(circle at center, #ffca28, #8b0000 70%);
+    }
+
+    .hero::before {
+      content: "🪔";
+      position: absolute;
+      top: 35px;
+      left: 8%;
+      font-size: 55px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .hero::after {
+      content: "🪔";
+      position: absolute;
+      top: 55px;
+      right: 8%;
+      font-size: 55px;
+      animation: float 3s ease-in-out infinite reverse;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      color: white;
+    }
+
+    .maa-icon {
+      font-size: 70px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 5px 10px #000);
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 65px);
+      color: #ffd54f;
+      text-shadow:
+        0 3px 0 #7b0000,
+        0 5px 15px rgba(0,0,0,.8);
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: clamp(21px, 4vw, 35px);
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2vw, 21px);
+      color: #ffe9a8;
+    }
+
+    .hero-date {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 10px 25px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffd54f, #ff9800);
+      color: #650000;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.35);
+    }
+
+    /* COUNTDOWN */
+    .countdown-section {
+      margin-top: -55px;
+      position: relative;
+      z-index: 5;
+      padding: 0 15px;
+    }
+
+    .countdown-box {
+      max-width: 850px;
+      margin: auto;
+      background: linear-gradient(135deg, #7b0000, #b71c1c, #7b0000);
+      color: white;
+      border: 3px solid #ffd54f;
+      border-radius: 25px;
+      padding: 25px 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(80,0,0,.3);
+    }
+
+    .countdown-box h2 {
+      color: #ffd54f;
+      margin-bottom: 18px;
+      font-size: 25px;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .time-box {
+      background: rgba(255,255,255,.13);
+      border: 1px solid rgba(255,213,79,.7);
+      border-radius: 15px;
+      padding: 12px 5px;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: clamp(28px, 6vw, 45px);
+      font-weight: bold;
+      color: #ffd54f;
+      line-height: 1.1;
+    }
+
+    .time-box small {
+      color: #fff;
+      font-size: 13px;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 70px 18px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      display: inline-block;
+      color: #8b0000;
+      font-size: clamp(27px, 5vw, 40px);
+      border-bottom: 4px solid #ffb300;
+      padding-bottom: 8px;
+    }
+
+    .section-title p {
+      margin-top: 8px;
+      color: #744000;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* AARTI */
+    .aarti-section {
+      background: #fff7e6;
+    }
+
+    .aarti-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .aarti-card {
+      background: white;
+      border-radius: 22px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 2px solid #ffd54f;
+      box-shadow: 0 8px 20px rgba(100,0,0,.10);
+    }
+
+    .aarti-card .icon {
+      font-size: 45px;
+    }
+
+    .aarti-card h3 {
+      color: #a50000;
+      margin: 8px 0;
+    }
+
+    .aarti-time {
+      font-size: 27px;
+      color: #d17a00;
+      font-weight: bold;
+    }
+
+    /* COMMITTEE */
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .member-card {
+      background: linear-gradient(145deg, #fff, #fff5db);
+      border: 2px solid #e8a600;
+      border-radius: 20px;
+      padding: 25px 15px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(80,0,0,.10);
+      transition: .3s;
+    }
+
+    .member-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 28px rgba(80,0,0,.18);
+    }
+
+    .member-icon {
+      width: 70px;
+      height: 70px;
+      margin: auto;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #8b0000, #d32f2f);
+      color: #ffd54f;
+      font-size: 32px;
+      border: 3px solid #ffd54f;
+    }
+
+    .member-card h3 {
+      margin-top: 12px;
+      color: #7b0000;
+      font-size: 20px;
+    }
+
+    .member-card p {
+      color: #704000;
+      margin: 5px 0 12px;
+    }
+
+    .call-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #8b0000;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .call-btn:hover {
+      background: #d32f2f;
+    }
+
+    /* PAYMENT */
+    .payment-section {
+      background:
+        radial-gradient(circle at top left, rgba(255,213,79,.20), transparent 30%),
+        linear-gradient(135deg, #590000, #9d0000, #5b0000);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .payment-section::before {
+      content: "ॐ";
+      position: absolute;
+      font-size: 280px;
+      opacity: .035;
+      right: -30px;
+      top: 0;
+    }
+
+    .payment-title h2 {
+      color: #ffd54f;
+      border-color: #ffd54f;
+    }
+
+    .payment-title p {
+      color: #ffe7a0;
+    }
+
+    .payment-card {
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(145deg, #fffaf0, #fff);
+      color: #4a1800;
+      border: 4px solid #ffd54f;
+      border-radius: 30px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,.35);
+      position: relative;
+      z-index: 2;
+    }
+
+    .payment-card h3 {
+      color: #8b0000;
+      font-size: 29px;
+      margin-bottom: 8px;
+    }
+
+    .payment-card .sub {
+      color: #714000;
+      margin-bottom: 25px;
+    }
+
+    .payment-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .qr-wrapper {
+      background: white;
+      display: inline-flex;
+      padding: 15px;
+      border-radius: 20px;
+      border: 3px solid #e8a600;
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    }
+
+    #qrcode {
+      min-width: 230px;
+      min-height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .upi-id {
+      margin: 15px auto;
+      padding: 10px 15px;
+      border-radius: 10px;
+      background: #fff3cd;
+      color: #720000;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    .phonepe-btn {
+      display: block;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(135deg, #5f259f, #7b1fa2);
+      padding: 15px 20px;
+      border-radius: 35px;
+      font-size: 19px;
+      font-weight: bold;
+      margin: 15px auto;
+      max-width: 320px;
+      box-shadow: 0 7px 18px rgba(70,0,100,.3);
+      transition: .25s;
+    }
+
+    .phonepe-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(70,0,100,.4);
+    }
+
+    .upi-btn {
+      display: block;
+      text-decoration: none;
+      color: #8b0000;
+      border: 2px solid #8b0000;
+      padding: 11px 18px;
+      border-radius: 30px;
+      max-width: 320px;
+      margin: auto;
+      font-weight: bold;
+    }
+
+    .payment-note {
+      margin-top: 22px;
+      padding: 13px;
+      border-radius: 12px;
+      background: #fff4d6;
+      color: #6d3500;
+      font-size: 14px;
+    }
+
+    /* MANAGEMENT */
+    .management {
+      background: #fff7e8;
+    }
+
+    .management-box {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 22px;
+      border-left: 7px solid #9d0000;
+      box-shadow: 0 8px 25px rgba(80,0,0,.1);
+    }
+
+    .management-box p {
+      margin: 8px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #430000;
+      color: #ffe7a0;
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    footer h3 {
+      color: #ffd54f;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    .footer-om {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    /* FLOATING BUTTON */
+    .floating-pay {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 100;
+      text-decoration: none;
+      background: linear-gradient(135deg, #5f259f, #7b1fa2);
+      color: white;
+      padding: 13px 18px;
+      border-radius: 35px;
+      font-weight: bold;
+      box-shadow: 0 7px 22px rgba(0,0,0,.3);
+      border: 2px solid white;
+    }
+
+    /* ANIMATION */
+    @keyframes float {
+      0%,100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width: 800px) {
+      .committee-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: auto;
+      }
+
+      .payment-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .hero {
+        min-height: 570px;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .aarti-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+      }
+
+      .qr-wrapper {
+        padding: 10px;
+      }
+
+      #qrcode {
+        min-width: 210px;
+        min-height: 210px;
+      }
+
+      section {
+        padding: 55px 14px;
+      }
+
+      .floating-pay {
+        right: 10px;
+        bottom: 10px;
+        font-size: 14px;
+        padding: 11px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero" id="home">
-
-  <h1>🪔 19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव 🪔</h1>
-
-  <p>📍 चंदौली</p>
-
-  <p class="welcome">
-    🌺 माँ दुर्गा का आशीर्वाद — आप सभी का हार्दिक स्वागत है 🙏
-  </p>
-
-</header>
-
-
-<nav class="nav">
-  <a href="#home">🏠 Home</a>
-  <a href="#countdown">⏳ Countdown</a>
-  <a href="#schedule">📅 कार्यक्रम</a>
-  <a href="#donation">🙏 चंदा</a>
-  <a href="#gallery">🖼️ Gallery</a>
-  <a href="#contact">📞 संपर्क</a>
-</nav>
-
-
-<main class="container">
-
-
-<!-- =========================================
-     COUNTDOWN
-========================================= -->
-
-<section class="card countdown-card" id="countdown">
-
-  <div class="count-title">
-
-    <div class="om">ॐ</div>
-
-    <h2>🌺 महोत्सव शुरू होने में शेष 🌺</h2>
-
+  <!-- TOP BAR -->
+  <div class="topbar">
+    🚩 जय माता दी • 19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव • चंदौली 🚩
   </div>
 
-  <p class="count-subtitle">
-    19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव — चंदौली
-  </p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
 
+      <div class="maa-icon">🙏</div>
 
-  <div class="countdown">
+      <h1>जय माता दी</h1>
 
-    <div class="countbox">
-      <b id="days">0</b>
-      <span>दिन</span>
+      <h2>19th Durga Pooja & Navratri Mahotsav</h2>
+
+      <p>
+        चंदौली में आयोजित भव्य दुर्गा पूजा एवं नवरात्रि महोत्सव
+      </p>
+
+      <div class="hero-date">
+        🌺 आयोजन — 11 अक्टूबर 2026 🌺
+      </div>
+
     </div>
+  </header>
 
-    <div class="countbox">
-      <b id="hours">0</b>
-      <span>घंटे</span>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-section">
+    <div class="countdown-box">
+
+      <h2>⏳ महोत्सव शुरू होने में बाकी समय</h2>
+
+      <div class="countdown">
+
+        <div class="time-box">
+          <span id="days">00</span>
+          <small>दिन</small>
+        </div>
+
+        <div class="time-box">
+          <span id="hours">00</span>
+          <small>घंटे</small>
+        </div>
+
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <small>मिनट</small>
+        </div>
+
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <small>सेकंड</small>
+        </div>
+
+      </div>
+
     </div>
-
-    <div class="countbox">
-      <b id="minutes">0</b>
-      <span>मिनट</span>
-    </div>
-
-    <div class="countbox">
-      <b id="seconds">0</b>
-      <span>सेकंड</span>
-    </div>
-
   </div>
 
 
-  <div class="event-date">
-    🪔 महोत्सव प्रारंभ — 20 अक्टूबर 2026, शाम 7:30 बजे 🪔
-  </div>
+  <!-- AARTI -->
+  <section class="aarti-section" id="aarti">
 
-</section>
+    <div class="container">
 
+      <div class="section-title">
+        <h2>🪔 आरती का समय</h2>
+        <p>माँ दुर्गा की आरती में सपरिवार पधारें</p>
+      </div>
 
-<!-- PROGRAM -->
+      <div class="aarti-grid">
 
-<section class="card" id="schedule">
+        <div class="aarti-card">
+          <div class="icon">🌅</div>
+          <h3>प्रातः आरती</h3>
+          <div class="aarti-time">सुबह 7:00 बजे</div>
+          <p>माँ दुर्गा की मंगल आरती</p>
+        </div>
 
-<h2>📅 कार्यक्रम / Event Schedule</h2>
+        <div class="aarti-card">
+          <div class="icon">🌙</div>
+          <h3>संध्या आरती</h3>
+          <div class="aarti-time">शाम 7:30 बजे</div>
+          <p>भव्य संध्या आरती</p>
+        </div>
 
-<table class="schedule">
+      </div>
 
-<tr>
-<th>समय</th>
-<th>कार्यक्रम</th>
-</tr>
+    </div>
 
-<tr>
-<td>🌅 7:00 AM</td>
-<td>प्रातः आरती</td>
-</tr>
+  </section>
 
-<tr>
-<td>🌆 7:30 PM</td>
-<td>संध्या आरती</td>
-</tr>
 
-<tr>
-<td>📢 बाद में</td>
-<td>अन्य सांस्कृतिक कार्यक्रम</td>
-</tr>
+  <!-- COMMITTEE -->
+  <section id="committee">
 
-</table>
+    <div class="container">
 
-</section>
+      <div class="section-title">
+        <h2>🌺 कमेटी सदस्य</h2>
+        <p>दुर्गा पूजा एवं नवरात्रि महोत्सव समिति</p>
+      </div>
 
+      <div class="committee-grid">
 
-<!-- DONATION -->
+        <!-- MEMBER 1 -->
+        <div class="member-card">
 
-<section class="card donation" id="donation">
+          <div class="member-icon">🙏</div>
 
-<h2>🙏 चंदा / Donation Details</h2>
+          <h3>Ramdulare Nishad</h3>
 
-<p>
-चंदा देने के लिए नीचे दिए गए UPI ID का उपयोग करें।
-</p>
+          <p>कमेटी सदस्य</p>
 
-<div class="upi-box">
+          <a class="call-btn"
+             href="tel:8853221208">
+            📞 8853221208
+          </a>
 
-<span>💳 UPI ID</span>
+        </div>
 
-<span class="upi-id" id="upiId">
-9696078769@axl
-</span>
 
-<button
-type="button"
-onclick="copyUPI()">
-📋 UPI ID Copy करें
-</button>
+        <!-- MEMBER 2 -->
+        <div class="member-card">
 
-</div>
+          <div class="member-icon">🙏</div>
 
-<p style="text-align:center;margin-top:15px">
+          <h3>Rampal Nishad</h3>
 
-<a href="upi://pay?pa=9696078769%40axl&pn=Durga%20Puja%20Chandauli&cu=INR">
+          <p>कमेटी सदस्य</p>
 
-💳 UPI App से भुगतान करें
+          <a class="call-btn"
+             href="tel:">
+            📞 संपर्क करें
+          </a>
 
-</a>
+        </div>
 
-</p>
 
-<p>
-📞
-<a href="tel:9696078769">
-Abhishek (Admin) — 9696078769
-</a>
-</p>
+        <!-- MEMBER 3 -->
+        <div class="member-card">
 
-<p class="small">
-भुगतान करने से पहले UPI नाम और विवरण जाँच लें।
-</p>
+          <div class="member-icon">🙏</div>
 
-</section>
+          <h3>Vijay Nishad</h3>
 
+          <p>कमेटी सदस्य</p>
 
-<!-- GALLERY -->
+          <a class="call-btn"
+             href="tel:9129072334">
+            📞 9129072334
+          </a>
 
-<section class="card" id="gallery">
+        </div>
 
-<h2>🖼️ फोटो गैलरी / Gallery</h2>
+      </div>
 
-<div class="gallery">
+    </div>
 
-<div>
-<img
-src="photo1.jpg"
-alt="दुर्गा पूजा मंच और कलाकार">
-</div>
+  </section>
 
-<div>
-<img
-src="photo2.jpg"
-alt="माँ दुर्गा की प्रतिमा">
-</div>
 
-<div>
-<img
-src="photo3.jpg"
-alt="माँ दुर्गा के साथ श्रद्धालु">
-</div>
+  <!-- PAYMENT -->
+  <section class="payment-section" id="payment">
 
-</div>
+    <div class="container">
 
-<p class="small">
-19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव — चंदौली
-</p>
+      <div class="section-title payment-title">
+        <h2>💰 दुर्गा पूजा चंदा / सहयोग</h2>
+        <p>
+          माँ दुर्गा के पावन आयोजन में अपनी श्रद्धानुसार सहयोग करें
+        </p>
+      </div>
 
-</section>
 
+      <div class="payment-card">
 
-<!-- CONTACT -->
+        <h3>📱 PhonePe से सीधे भुगतान करें</h3>
 
-<section class="card" id="contact">
+        <p class="sub">
+          नीचे दिए QR Code को Scan करें या सीधे PhonePe से Payment करें
+        </p>
 
-<h2>📞 संपर्क / Contact</h2>
 
-<div class="contact-grid">
+        <div class="payment-content">
 
-<div class="contact">
+          <!-- QR -->
+          <div>
 
-<b>Abhishek (Admin)</b>
+            <div class="qr-wrapper">
+              <div id="qrcode"></div>
+            </div>
 
-<br>
+            <div class="upi-id">
+              UPI ID: 9696078769@ybl
+            </div>
 
-📞
-<a href="tel:9696078769">
-9696078769
-</a>
+          </div>
 
-<br>
 
-<a href="https://wa.me/919696078769" target="_blank">
-💬 WhatsApp करें
-</a>
+          <!-- BUTTON -->
+          <div>
 
-</div>
+            <!-- DIRECT PHONEPE -->
+            <a
+              class="phonepe-btn"
+              href="phonepe://pay?pa=9696078769@ybl&pn=Durga%20Pooja%20Chandauli&cu=INR"
+              onclick="openPhonePe(event)"
+            >
+              📲 Pay Directly with PhonePe
+            </a>
 
 
-<div class="contact">
+            <!-- UPI FALLBACK -->
+            <a
+              class="upi-btn"
+              href="upi://pay?pa=9696078769@ybl&pn=Durga%20Pooja%20Chandauli&cu=INR"
+            >
+              💳 Other UPI Apps से Pay करें
+            </a>
 
-<b>Umesh</b>
+            <div class="payment-note">
+              🙏 Payment करते समय कृपया सही राशि और UPI ID
+              <strong>9696078769@ybl</strong> verify कर लें।
+            </div>
 
-<br>
+          </div>
 
-📞
-<a href="tel:9369323162">
-9369323162
-</a>
+        </div>
 
-</div>
+      </div>
 
+    </div>
 
-<div class="contact">
+  </section>
 
-<b>Dileep</b>
 
-<br>
+  <!-- MANAGEMENT -->
+  <section class="management">
 
-📞
-<a href="tel:9140767107">
-9140767107
-</a>
+    <div class="container">
 
-</div>
+      <div class="section-title">
+        <h2>👥 Management Team</h2>
+        <p>आयोजन को सफल बनाने वाली टीम</p>
+      </div>
 
-</div>
+      <div class="management-box">
 
-</section>
+        <p>🔹 <strong>Abhishek</strong> — Admin — 9696078769</p>
 
+        <p>🔹 <strong>Dileep</strong></p>
 
-<!-- AARTI -->
+        <p>🔹 <strong>Umesh</strong> — 9369323162</p>
 
-<section class="card">
+        <p>🔹 <strong>Pawan</strong></p>
 
-<h2>🕉️ आरती का समय / Aarti Timings</h2>
+        <p>🔹 <strong>Ravi</strong></p>
 
-<div class="times">
+        <p>🔹 <strong>Ankul</strong></p>
 
-<div class="time">
+        <p>🔹 <strong>Kuldeep</strong></p>
 
-🌅 प्रातः / Morning
+        <p>🔹 <strong>Sandeep</strong></p>
 
-<br>
+      </div>
 
-<b>
-7:00 बजे / 7:00 AM
-</b>
+    </div>
 
-</div>
+  </section>
 
 
-<div class="time">
+  <!-- FOOTER -->
+  <footer>
 
-🌆 संध्या / Evening
+    <div class="footer-om">ॐ</div>
 
-<br>
+    <h3>19th Durga Pooja & Navratri Mahotsav</h3>
 
-<b>
-7:30 बजे / 7:30 PM
-</b>
+    <p>चंदौली</p>
 
-</div>
+    <p>🙏 जय माता दी 🙏</p>
 
-</div>
+    <p style="margin-top:15px;font-size:13px;">
+      © 2026 Durga Pooja Committee Chandauli
+    </p>
 
-</section>
+  </footer>
 
 
-<!-- POLL -->
+  <!-- FLOATING PHONEPE BUTTON -->
+  <a
+    class="floating-pay"
+    href="phonepe://pay?pa=9696078769@ybl&pn=Durga%20Pooja%20Chandauli&cu=INR"
+    onclick="openPhonePe(event)"
+  >
+    📲 PhonePe Pay
+  </a>
 
-<section class="card">
 
-<h2>📝 पहले अपनी जानकारी भरें / Fill Your Details First</h2>
+  <!-- QR CODE LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
-<form id="pollForm">
 
-<label>
-नाम / Name
-</label>
+  <script>
 
-<input
-id="name"
-type="text"
-required>
+    /* ==========================================
+       COUNTDOWN
+       TARGET DATE: 11 OCTOBER 2026
+       ========================================== */
 
+    const targetDate =
+      new Date("2026-10-11T00:00:00+05:30").getTime();
 
-<label>
-मोबाइल नंबर / Mobile No.
-</label>
 
-<input
-id="mobile"
-type="tel"
-pattern="[0-9]{10}"
-maxlength="10"
-required>
+    function updateCountdown() {
 
+      const now = new Date().getTime();
 
-<h2 style="margin-top:24px">
-📊 जनमत / Poll
-</h2>
+      const distance = targetDate - now;
 
 
-<div class="q">
+      if (distance <= 0) {
 
-1. क्या आपने चंदा दे दिया है?
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
 
-<div class="opts">
+        return;
+      }
 
-<label>
-<input type="radio" name="q1" value="Yes" required>
-हाँ / Yes
-</label>
 
-<label>
-<input type="radio" name="q1" value="No">
-नहीं / No
-</label>
+      const days =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
 
-</div>
+      const hours =
+        Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) /
+          (1000 * 60 * 60)
+        );
 
-</div>
+      const minutes =
+        Math.floor(
+          (distance % (1000 * 60 * 60)) /
+          (1000 * 60)
+        );
 
+      const seconds =
+        Math.floor(
+          (distance % (1000 * 60)) /
+          1000
+        );
 
-<div class="q">
 
-2. क्या आप समिति के सदस्य हैं?
+      document.getElementById("days").innerText =
+        String(days).padStart(2, "0");
 
-<div class="opts">
+      document.getElementById("hours").innerText =
+        String(hours).padStart(2, "0");
 
-<label>
-<input type="radio" name="q2" value="Yes" required>
-हाँ / Yes
-</label>
+      document.getElementById("minutes").innerText =
+        String(minutes).padStart(2, "0");
 
-<label>
-<input type="radio" name="q2" value="No">
-नहीं / No
-</label>
+      document.getElementById("seconds").innerText =
+        String(seconds).padStart(2, "0");
+    }
 
-</div>
 
-</div>
+    updateCountdown();
 
+    setInterval(updateCountdown, 1000);
 
-<div class="q">
 
-3. क्या आपको पंडाल में आकर अच्छा लगता है?
 
-<div class="opts">
+    /* ==========================================
+       UPI QR CODE
+       ========================================== */
 
-<label>
-<input type="radio" name="q3" value="Yes" required>
-हाँ / Yes
-</label>
+    const upiLink =
+      "upi://pay?pa=9696078769@ybl" +
+      "&pn=Durga%20Pooja%20Chandauli" +
+      "&cu=INR";
 
-<label>
-<input type="radio" name="q3" value="No">
-नहीं / No
-</label>
 
-</div>
+    new QRCode(
+      document.getElementById("qrcode"),
+      {
+        text: upiLink,
+        width: 230,
+        height: 230,
+        colorDark: "#7b0000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      }
+    );
 
-</div>
 
 
-<div class="q">
+    /* ==========================================
+       PHONEPE BUTTON
+       ========================================== */
 
-4. आपके यहाँ कार्यक्रम अच्छे दिखाए जाते हैं?
+    function openPhonePe(event) {
 
-<div class="opts">
+      /*
+        PhonePe app खोलने के लिए phonepe://pay
+        और fallback के रूप में UPI URL.
+      */
 
-<label>
-<input type="radio" name="q4" value="Yes" required>
-हाँ / Yes
-</label>
+      const phonePeUrl =
+        "phonepe://pay?pa=9696078769@ybl" +
+        "&pn=Durga%20Pooja%20Chandauli" +
+        "&cu=INR";
 
-<label>
-<input type="radio" name="q4" value="No">
-नहीं / No
-</label>
+      const upiUrl =
+        "upi://pay?pa=9696078769@ybl" +
+        "&pn=Durga%20Pooja%20Chandauli" +
+        "&cu=INR";
 
-</div>
 
-</div>
+      /*
+        Mobile browser में PhonePe खोलने की कोशिश
+      */
 
+      event.preventDefault();
 
-<div class="q">
+      window.location.href = phonePeUrl;
 
-5. समिति का कोई भी व्यक्ति अनावश्यक बोलता है?
 
-<div class="opts">
+      /*
+        यदि PhonePe उपलब्ध नहीं है तो UPI intent
+      */
 
-<label>
-<input type="radio" name="q5" value="Yes" required>
-हाँ / Yes
-</label>
+      setTimeout(function() {
+        window.location.href = upiUrl;
+      }, 1200);
 
-<label>
-<input type="radio" name="q5" value="No">
-नहीं / No
-</label>
+    }
 
-</div>
+  </script>
 
-</div>
-
-
-<div class="q">
-
-6. क्या आप चंदौली के निवासी हैं?
-
-<div class="opts">
-
-<label>
-<input type="radio" name="q6" value="Yes" required>
-हाँ / Yes
-</label>
-
-<label>
-<input type="radio" name="q6" value="No">
-नहीं / No
-</label>
-
-</div>
-
-</div>
-
-
-<button type="submit">
-📲 WhatsApp पर Poll भेजें / Send Poll on WhatsApp
-</button>
-
-
-<div id="success" class="success">
-
-WhatsApp खुल रहा है। कृपया तैयार संदेश देखकर Send दबाएँ।
-
-</div>
-
-</form>
-
-
-<p class="small">
-
-Poll प्राप्त करने वाला नंबर /
-
-<a href="https://wa.me/919696078769">
-
-+91 9696078769
-
-</a>
-
-</p>
-
-</section>
-
-
-<!-- MANAGEMENT -->
-
-<section class="card">
-
-<h2>👥 Management Staff</h2>
-
-<p>
-<b>Abhishek (Admin)</b> —
-<a href="tel:9696078769">9696078769</a>
-</p>
-
-<p>
-Dileep, Umesh, Pawan, Ravi, Ankul, Kuldeep, Sandeep, Raj
-</p>
-
-</section>
-
-
-<!-- COMMITTEE -->
-
-<section class="card">
-
-<h2>👤 Committee Members</h2>
-
-<div class="members">
-
-<div class="member">
-1. Sarwan Kumar (Advocate)
-<br>
-📞 9415975321
-</div>
-
-<div class="member">
-2. Satish Kotedar
-<br>
-📞 8953709347
-</div>
-
-<div class="member">
-3. Narendra Nishad
-<br>
-📞 9936270831
-</div>
-
-<div class="member">
-4. Umesh Nishad
-<br>
-📞 9369323162
-</div>
-
-<div class="member">
-5. Dileep
-<br>
-📞 9140767107
-</div>
-
-<div class="member">
-6. Narendra Bhargav
-</div>
-
-<div class="member">
-7. Bishambhar
-</div>
-
-<div class="member">
-8. Rajmal
-</div>
-
-<div class="member">
-9. Amrendra Nishad (Assistant), PWD Department
-<br>
-📞 9794540612
-</div>
-
-<div class="member">
-10. Pawan
-<br>
-📞 9250361876
-</div>
-
-<div class="member">
-11. Bhagauti Nishad
-<br>
-📞 7054212069
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-🌺 ॐ दुर्गायै नमः 🌺
-
-<br><br>
-
-🙏 बहुत-बहुत धन्यवाद / Thank You Very Much 🙏
-
-</footer>
-
-</main>
-
-
-<script>
-
-/* =========================================
-   COUNTDOWN DATE
-   20 OCTOBER 2026 - 7:30 PM IST
-========================================= */
-
-const eventDate =
-new Date("2026-10-20T19:30:00+05:30");
-
-
-function updateCountdown(){
-
-  const now = new Date();
-
-  const distance = eventDate - now;
-
-  if(distance <= 0){
-
-    document.getElementById("days").textContent = "0";
-    document.getElementById("hours").textContent = "0";
-    document.getElementById("minutes").textContent = "0";
-    document.getElementById("seconds").textContent = "0";
-
-    return;
-
-  }
-
-
-  const days =
-  Math.floor(distance / (1000 * 60 * 60 * 24));
-
-  const hours =
-  Math.floor(
-    (distance / (1000 * 60 * 60)) % 24
-  );
-
-  const minutes =
-  Math.floor(
-    (distance / (1000 * 60)) % 60
-  );
-
-  const seconds =
-  Math.floor(
-    (distance / 1000) % 60
-  );
-
-
-  document.getElementById("days").textContent =
-  days;
-
-  document.getElementById("hours").textContent =
-  hours;
-
-  document.getElementById("minutes").textContent =
-  minutes;
-
-  document.getElementById("seconds").textContent =
-  seconds;
-
-}
-
-
-updateCountdown();
-
-setInterval(updateCountdown,1000);
-
-
-/* =========================================
-   COPY UPI
-========================================= */
-
-function copyUPI(){
-
-  navigator.clipboard
-  .writeText("9696078769@axl")
-  .then(function(){
-
-    alert("✅ UPI ID कॉपी हो गई");
-
-  })
-  .catch(function(){
-
-    alert("UPI ID: 9696078769@axl");
-
-  });
-
-}
-
-
-/* =========================================
-   WHATSAPP POLL
-========================================= */
-
-document
-.getElementById("pollForm")
-.addEventListener("submit",function(e){
-
-  e.preventDefault();
-
-
-  const v = function(n){
-
-    return document
-    .querySelector(
-      'input[name="'+n+'"]:checked'
-    ).value;
-
-  };
-
-
-  const msg =
-
-`🪔 19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव, चंदौली
-
-19th Durga Puja & Navratri Mahotsav, Chandauli
-
-नाम / Name: ${
-document.getElementById("name").value
-}
-
-मोबाइल / Mobile: ${
-document.getElementById("mobile").value
-}
-
-
-📊 POLL / जनमत
-
-1. चंदा दिया? / Donation given? — ${v("q1")}
-
-2. समिति के सदस्य? / Committee member? — ${v("q2")}
-
-3. पंडाल में आना अच्छा लगता है? / Like visiting Pandal? — ${v("q3")}
-
-4. कार्यक्रम अच्छे दिखाए जाते हैं? / Programs presented well? — ${v("q4")}
-
-5. कोई समिति सदस्य अनावश्यक बोलता है? / Any member speaks unnecessarily? — ${v("q5")}
-
-6. चंदौली के निवासी? / Resident of Chandauli? — ${v("q6")}
-
-
-🙏 बहुत-बहुत धन्यवाद / Thank You Very Much`;
-
-
-  document
-  .getElementById("success")
-  .style.display = "block";
-
-
-  window.open(
-    "https://wa.me/919696078769?text="
-    + encodeURIComponent(msg),
-    "_blank"
-  );
-
-});
-
-</script>
 
 </body>
 </html>
