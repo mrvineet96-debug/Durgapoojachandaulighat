@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव — चंदौली</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Noto Sans Devanagari,sans-serif;
+  background:#fff7ed;
+  color:#3b1608;
+}
+
+.hero{
+  padding:42px 18px;
+  text-align:center;
+  background:linear-gradient(135deg,#8b0000,#e65100,#ffb300);
+  color:#fff;
+}
+
+.hero h1{
+  margin:0 0 8px;
+  font-size:clamp(28px,7vw,48px)
+}
+
+.hero p{
+  margin:6px;
+  font-size:18px
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px
+}
+
+.card{
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  margin:16px 0;
+  box-shadow:0 5px 20px #7c2d1218;
+  border:1px solid #fed7aa
+}
+
+h2{
+  color:#9a3412;
+  margin-top:0
+}
+
+.times{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
+
+.time{
+  flex:1;
+  min-width:210px;
+  background:#fff1d6;
+  border-radius:14px;
+  padding:18px;
+  text-align:center;
+  font-size:20px
+}
+
+label{
+  display:block;
+  font-weight:700;
+  margin:14px 0 7px
+}
+
+input[type=text],
+input[type=tel],
+input[type=file]{
+  width:100%;
+  padding:13px;
+  border:1px solid #fdba74;
+  border-radius:10px;
+  font-size:16px;
+  background:white
+}
+
+.q{
+  padding:14px 0;
+  border-bottom:1px solid #fde2c0
+}
+
+.q:last-child{
+  border-bottom:0
+}
+
+.opts{
+  display:flex;
+  gap:18px;
+  margin-top:8px
+}
+
+.opts label{
+  font-weight:500;
+  margin:0
+}
+
+button{
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:12px;
+  background:#c2410c;
+  color:white;
+  font-size:18px;
+  font-weight:800;
+  cursor:pointer;
+  margin:4px 0
+}
+
+button:hover{
+  opacity:.9
+}
+
+.small{
+  font-size:13px;
+  color:#6b3b25
+}
+
+.members{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:10px
+}
+
+.member{
+  background:#fff7ed;
+  padding:12px;
+  border-radius:10px
+}
+
+a{
+  color:#9a3412;
+  font-weight:700;
+  text-decoration:none
+}
+
+.success{
+  display:none;
+  background:#ecfdf5;
+  color:#166534;
+  padding:14px;
+  border-radius:10px;
+  margin-top:12px
+}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#7f1d1d;
+  display:flex;
+  gap:6px;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:8px
+}
+
+.nav a{
+  color:#fff;
+  padding:9px 12px;
+  border-radius:20px;
+  font-size:14px
+}
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  text-align:center
+}
+
+.countbox{
+  background:#fff1d6;
+  border-radius:12px;
+  padding:12px
+}
+
+.countbox b{
+  display:block;
+  font-size:25px
+}
+
+.schedule{
+  width:100%;
+  border-collapse:collapse
+}
+
+.schedule th,
+.schedule td{
+  padding:11px;
+  border-bottom:1px solid #fed7aa;
+  text-align:left
+}
+
+.schedule th{
+  background:#fff1d6
+}
+
+.donation{
+  background:linear-gradient(135deg,#fff7ed,#ffedd5)
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px
+}
+
+.gallery div{
+  min-height:130px;
+  border-radius:14px;
+  background:linear-gradient(135deg,#fed7aa,#ffedd5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:16px;
+  overflow:hidden
+}
+
+.gallery img,
+.gallery video{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:10px
+}
+
+.contact{
+  background:#fff7ed;
+  padding:14px;
+  border-radius:12px
+}
+
+@media(max-width:500px){
+  .countdown{
+    grid-template-columns:repeat(2,1fr)
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero" id="home">
+  <h1>🪔 19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव</h1>
+  <p>📍 चंदौली</p>
+  <p>माँ दुर्गा का आशीर्वाद — आप सभी का हार्दिक स्वागत है 🙏</p>
+</header>
+
+<nav class="nav">
+  <a href="#home">🏠 Home</a>
+  <a href="#schedule">📅 कार्यक्रम</a>
+  <a href="#donation">🙏 चंदा</a>
+  <a href="#gallery">🖼️ Gallery</a>
+  <a href="#contact">📞 संपर्क</a>
+</nav>
+
+<main class="container">
+
+<!-- COUNTDOWN -->
+<section class="card">
+  <h2>⏳ महोत्सव Countdown</h2>
+
+  <div class="countdown">
+    <div class="countbox">
+      <b id="days">0</b>दिन
+    </div>
+
+    <div class="countbox">
+      <b id="hours">0</b>घंटे
+    </div>
+
+    <div class="countbox">
+      <b id="minutes">0</b>मिनट
+    </div>
+
+    <div class="countbox">
+      <b id="seconds">0</b>सेकंड
+    </div>
+  </div>
+
+  <p class="small" style="text-align:center">
+    📅 महोत्सव की तारीख: <b>11/10/2026</b>
+  </p>
+</section>
+
+
+<!-- PROGRAM -->
+<section class="card" id="schedule">
+  <h2>📅 कार्यक्रम / Event Schedule</h2>
+
+  <table class="schedule">
+    <tr>
+      <th>समय</th>
+      <th>कार्यक्रम</th>
+    </tr>
+
+    <tr>
+      <td>🌅 7:00 AM</td>
+      <td>प्रातः आरती</td>
+    </tr>
+
+    <tr>
+      <td>🌆 7:30 PM</td>
+      <td>संध्या आरती</td>
+    </tr>
+
+    <tr>
+      <td>📢 बाद में</td>
+      <td>अन्य सांस्कृतिक कार्यक्रम</td>
+    </tr>
+  </table>
+</section>
+
+
+<!-- DONATION -->
+<section class="card donation" id="donation">
+
+<h2>🙏 चंदा / Donation Details</h2>
+
+<p>
+अपनी सुविधा के अनुसार चंदा राशि चुनें और सीधे PhonePe से भुगतान करें।
+</p>
+
+<div class="members">
+
+<button type="button" onclick="payPhonePe(351)">
+₹351
+</button>
+
+<button type="button" onclick="payPhonePe(501)">
+₹501
+</button>
+
+<button type="button" onclick="payPhonePe(551)">
+₹551
+</button>
+
+<button type="button" onclick="payPhonePe(1001)">
+₹1001
+</button>
+
+</div>
+
+<p>
+<b>UPI ID:</b>
+<span id="upiId">9696078769@axl</span>
+
+<button
+type="button"
+style="margin-top:10px"
+onclick="copyUPI()">
+📋 UPI ID Copy करें
+</button>
+</p>
+
+<p>
+<button type="button" onclick="payPhonePe()">
+📱 सीधे PhonePe से भुगतान करें
+</button>
+</p>
+
+<p>
+📞
+<a href="tel:9696078769">
+Abhishek (Admin) — 9696078769
+</a>
+</p>
+
+<label for="paymentScreenshot">
+📸 भुगतान के बाद Screenshot लगाएँ
+</label>
+
+<input
+id="paymentScreenshot"
+type="file"
+accept="image/*">
+
+<p class="small">
+भुगतान करने से पहले PhonePe में UPI नाम और राशि जाँच लें।
+</p>
+
+</section>
+
+
+<!-- GALLERY -->
+<section class="card" id="gallery">
+
+<h2>🖼️ फोटो एवं वीडियो गैलरी / Gallery</h2>
+
+<div class="gallery">
+
+<div>
+<img src="gallery/photo1.jpg" alt="दुर्गा पूजा की फोटो" onclick="openMedia(this.src)">
+<span class="media-label">📷 फोटो 1</span>
+</div>
+
+<div>
+<img src="gallery/photo2.jpg" alt="माँ दुर्गा की प्रतिमा" onclick="openMedia(this.src)">
+<span class="media-label">📷 फोटो 2</span>
+</div>
+
+<div>
+<img src="gallery/photo3.jpg" alt="दुर्गा पूजा की फोटो" onclick="openMedia(this.src)">
+<span class="media-label">📷 फोटो 3</span>
+</div>
+
+<div>
+<img src="gallery/photo4.jpg" alt="माँ दुर्गा के साथ श्रद्धालु" onclick="openMedia(this.src)">
+<span class="media-label">📷 फोटो 4</span>
+</div>
+
+<div>
+<img src="gallery/photo5.jpg" alt="सांस्कृतिक कार्यक्रम" onclick="openMedia(this.src)">
+<span class="media-label">📷 फोटो 5</span>
+</div>
+
+<div>
+<video controls preload="metadata">
+<source src="gallery/video1.mp4" type="video/mp4">
+आपका browser video support नहीं करता।
+</video>
+<span class="media-label">🎥 वीडियो 1</span>
+</div>
+
+<div>
+<video controls preload="metadata">
+<source src="gallery/video2.mp4" type="video/mp4">
+आपका browser video support नहीं करता।
+</video>
+<span class="media-label">🎥 वीडियो 2</span>
+</div>
+
+</div>
+
+<p class="small" style="text-align:center;margin-top:14px">
+🙏 19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव — चंदौली
+</p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="card" id="contact">
+
+<h2>📞 संपर्क / Contact</h2>
+
+<div class="contact-grid">
+
+<div class="contact">
+<b>Abhishek (Admin)</b><br>
+📞
+<a href="tel:9696078769">
+9696078769
+</a>
+<br>
+
+<a
+href="https://wa.me/919696078769"
+target="_blank">
+💬 WhatsApp करें
+</a>
+</div>
+
+<div class="contact">
+<b>Umesh</b><br>
+📞
+<a href="tel:9369323162">
+9369323162
+</a>
+</div>
+
+<div class="contact">
+<b>Dileep</b><br>
+📞
+<a href="tel:9140767107">
+9140767107
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AARTI -->
+<section class="card">
+
+<h2>🕉️ आरती का समय / Aarti Timings</h2>
+
+<div class="times">
+
+<div class="time">
+🌅 प्रातः / Morning
+<br>
+<b>7:00 बजे / 7:00 AM</b>
+</div>
+
+<div class="time">
+🌆 संध्या / Evening
+<br>
+<b>7:30 बजे / 7:30 PM</b>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- POLL -->
+<section class="card">
+
+<h2>📝 पहले अपनी जानकारी भरें / Fill Your Details First</h2>
+
+<form id="pollForm">
+
+<label>
+नाम / Name
+</label>
+
+<input
+id="name"
+type="text"
+required>
+
+<label>
+मोबाइल नंबर / Mobile No.
+</label>
+
+<input
+id="mobile"
+type="tel"
+pattern="[0-9]{10}"
+maxlength="10"
+required>
+
+<h2 style="margin-top:24px">
+📊 जनमत / Poll
+</h2>
+
+
+<div class="q">
+
+1. क्या आपने चंदा दे दिया है?
+
+<div class="opts">
+
+<label>
+<input
+type="radio"
+name="q1"
+value="Yes"
+required>
+हाँ / Yes
+</label>
+
+<label>
+<input
+type="radio"
+name="q1"
+value="No">
+नहीं / No
+</label>
+
+</div>
+</div>
+
+
+<div class="q">
+
+2. क्या आप समिति के सदस्य हैं?
+
+<div class="opts">
+
+<label>
+<input
+type="radio"
+name="q2"
+value="Yes"
+required>
+हाँ / Yes
+</label>
+
+<label>
+<input
+type="radio"
+name="q2"
+value="No">
+नहीं / No
+</label>
+
+</div>
+</div>
+
+
+<div class="q">
+
+3. क्या आपको पंडाल में आकर अच्छा लगता है?
+
+<div class="opts">
+
+<label>
+<input
+type="radio"
+name="q3"
+value="Yes"
+required>
+हाँ / Yes
+</label>
+
+<label>
+<input
+type="radio"
+name="q3"
+value="No">
+नहीं / No
+</label>
+
+</div>
+</div>
+
+
+<div class="q">
+
+4. आपके यहाँ कार्यक्रम अच्छे दिखाए जाते हैं?
+
+<div class="opts">
+
+<label>
+<input
+type="radio"
+name="q4"
+value="Yes"
+required>
+हाँ / Yes
+</label>
+
+<label>
+<input
+type="radio"
+name="q4"
+value="No">
+नहीं / No
+</label>
+
+</div>
+</div>
+
+
+<div class="q">
+
+5. समिति का कोई भी व्यक्ति अनावश्यक बोलता है?
+
+<div class="opts">
+
+<label>
+<input
+type="radio"
+name="q5"
+value="Yes"
+required>
+हाँ / Yes
+</label>
+
+<label>
+<input
+type="radio"
+name="q5"
+value="No">
+नहीं / No
+</label>
+
+</div>
+</div>
+
+
+<div class="q">
+
+6. क्या आप चंदौली के निवासी हैं?
+
+<div class="opts">
+
+<label>
+<input
+type="radio"
+name="q6"
+value="Yes"
+required>
+हाँ / Yes
+</label>
+
+<label>
+<input
+type="radio"
+name="q6"
+value="No">
+नहीं / No
+</label>
+
+</div>
+</div>
+
+
+<button type="submit">
+📲 WhatsApp पर Poll भेजें
+</button>
+
+<div id="success" class="success">
+WhatsApp खुल रहा है। कृपया तैयार संदेश देखकर Send दबाएँ।
+</div>
+
+</form>
+
+<p class="small">
+Poll प्राप्त करने वाला नंबर:
+<a href="https://wa.me/919696078769">
++91 9696078769
+</a>
+</p>
+
+</section>
+
+
+<!-- COMMITTEE -->
+<section class="card">
+
+<h2>👤 Committee Members</h2>
+
+<div class="members">
+
+<div class="member">
+1. Sarwan Kumar (Advocate)<br>
+📞 9415975321
+</div>
+
+<div class="member">
+2. Satish Kotedar<br>
+📞 8953709347
+</div>
+
+<div class="member">
+3. Narendra Nishad<br>
+📞 9936270831
+</div>
+
+<div class="member">
+4. Umesh Nishad<br>
+📞 9369323162
+</div>
+
+<div class="member">
+5. Dileep<br>
+📞 9140767107
+</div>
+
+<div class="member">
+6. Narendra Bhargav
+</div>
+
+<div class="member">
+7. Bishambhar
+</div>
+
+<div class="member">
+8. Rajmal
+</div>
+
+<div class="member">
+9. Amrendra Nishad (Assistant), PWD Department<br>
+📞 9794540612
+</div>
+
+<div class="member">
+10. Pawan<br>
+📞 9250361876
+</div>
+
+<div class="member">
+11. Bhagauti Nishad<br>
+📞 7054212069
+</div>
+
+<div class="member">
+12. Ramdulare Nishad<br>
+📞
+<a href="tel:8853221208">
+8853221208
+</a>
+</div>
+
+<div class="member">
+13. Rampal Nishad
+</div>
+
+<div class="member">
+14. Vijay Nishad<br>
+📞
+<a href="tel:9129072334">
+9129072334
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<footer style="text-align:center;padding:10px 0 30px">
+🙏 बहुत-बहुत धन्यवाद / Thank You Very Much 🙏
+</footer>
+
+</main>
+
+
+<script>
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+const eventDate =
+new Date("2026-10-11T19:30:00+05:30");
+
+function updateCountdown(){
+
+  const x =
+  Math.max(0,eventDate-new Date());
+
+  document.getElementById("days")
+  .textContent =
+  Math.floor(x/86400000);
+
+  document.getElementById("hours")
+  .textContent =
+  Math.floor(x/3600000)%24;
+
+  document.getElementById("minutes")
+  .textContent =
+  Math.floor(x/60000)%60;
+
+  document.getElementById("seconds")
+  .textContent =
+  Math.floor(x/1000)%60;
+}
+
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+
+/* =========================
+   COPY UPI
+========================= */
+
+function copyUPI(){
+
+  navigator.clipboard
+  .writeText("9696078769@axl")
+  .then(function(){
+
+    alert("UPI ID कॉपी हो गई");
+
+  });
+
+}
+
+
+/* =========================
+   PHONEPE PAYMENT
+========================= */
+
+function payPhonePe(amount){
+
+  const upi =
+  "9696078769@axl";
+
+  let phonePeURL =
+  "phonepe://pay" +
+  "?pa=" + encodeURIComponent(upi) +
+  "&pn=" + encodeURIComponent(
+    "Durga Puja Chandauli"
+  ) +
+  "&cu=INR";
+
+  if(amount){
+
+    phonePeURL +=
+    "&am=" +
+    encodeURIComponent(amount);
+
+  }
+
+  window.location.href =
+  phonePeURL;
+
+
+  /* Fallback UPI */
+
+  setTimeout(function(){
+
+    let upiURL =
+    "upi://pay" +
+    "?pa=" + encodeURIComponent(upi) +
+    "&pn=" + encodeURIComponent(
+      "Durga Puja Chandauli"
+    ) +
+    "&cu=INR";
+
+    if(amount){
+
+      upiURL +=
+      "&am=" +
+      encodeURIComponent(amount);
+
+    }
+
+    window.location.href =
+    upiURL;
+
+  },1200);
+
+}
+
+
+/* =========================
+   GALLERY PREVIEW
+========================= */
+
+function previewGalleryFiles(event){
+  const box = document.getElementById("galleryPreview");
+  box.innerHTML = "";
+
+  Array.from(event.target.files || []).forEach(function(file){
+    const url = URL.createObjectURL(file);
+    let el;
+
+    if(file.type.startsWith("video/")){
+      el = document.createElement("video");
+      el.controls = true;
+      el.src = url;
+    }else{
+      el = document.createElement("img");
+      el.src = url;
+      el.alt = file.name;
+    }
+
+    box.appendChild(el);
+  });
+}
+
+function openMedia(src){
+  window.open(src, "_blank");
+}
+
+
+/* =========================
+   PAYMENT SCREENSHOT
+========================= */
+
+document.getElementById("paymentScreenshot").addEventListener("change", function(){
+  const file = this.files && this.files[0];
+  const preview = document.getElementById("paymentPreview");
+
+  if(!file){
+    preview.textContent = "";
+    return;
+  }
+
+  if(!file.type.startsWith("image/")){
+    preview.textContent = "कृपया payment का image screenshot चुनें।";
+    this.value = "";
+    return;
+  }
+
+  const url = URL.createObjectURL(file);
+  preview.innerHTML =
+    "✅ Screenshot तैयार है: <b>" + file.name +
+    "</b><br><img src=\"" + url +
+    "\" alt=\"Payment Screenshot\" style=\"max-width:180px;max-height:220px;border-radius:10px;margin-top:7px\">";
+});
+
+async function sendPaymentScreenshot(){
+
+  const input = document.getElementById("paymentScreenshot");
+  const file = input.files && input.files[0];
+
+  if(!file){
+    alert("पहले payment का screenshot चुनें।");
+    return;
+  }
+
+  if(!file.type.startsWith("image/")){
+    alert("कृपया केवल image screenshot चुनें।");
+    return;
+  }
+
+  /*
+   * GitHub Pages/static HTML WhatsApp को सीधे file attachment
+   * upload नहीं कर सकता। इसलिए पहले share sheet/WhatsApp share
+   * खोलने की कोशिश की जाती है। समर्थित mobile browsers में user
+   * screenshot को WhatsApp में attachment के रूप में चुन सकता है।
+   */
+  const shareText =
+    "🪔 19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव, चंदौली\\n" +
+    "🙏 Payment Screenshot भेज रहा/रही हूँ।\\n" +
+    "📸 कृपया payment verify कर लें।";
+
+  if(navigator.share){
+    try{
+      const shareFile = new File([file], file.name, {type:file.type});
+
+      if(navigator.canShare && navigator.canShare({files:[shareFile]})){
+        await navigator.share({
+          title:"Payment Screenshot",
+          text:shareText,
+          files:[shareFile]
+        });
+        return;
+      }
+    }catch(err){
+      if(err && err.name === "AbortError") return;
+    }
+  }
+
+  /*
+   * Fallback: WhatsApp chat खोलें और user को screenshot attach
+   * करने के लिए तैयार संदेश दें।
+   */
+  const wa =
+    "https://wa.me/919696078769?text=" +
+    encodeURIComponent(shareText);
+
+  window.open(wa, "_blank");
+
+  alert(
+    "WhatsApp खुल गया है। अब 📎 Attachment से यही payment screenshot चुनकर Send करें।"
+  );
+}
+
+
+/* =========================
+   WHATSAPP POLL
+========================= */
+
+
+document
+.getElementById("pollForm")
+.addEventListener("submit",function(e){
+
+  e.preventDefault();
+
+
+  const v =
+  n =>
+  document
+  .querySelector(
+    'input[name="' + n + '"]:checked'
+  ).value;
+
+
+  const msg =
+
+`🪔 19वाँ दुर्गा पूजा एवं नवरात्रि महोत्सव, चंदौली
+19th Durga Puja & Navratri Mahotsav, Chandauli
+
+नाम / Name:
+${document.getElementById("name").value}
+
+मोबाइल / Mobile:
+${document.getElementById("mobile").value}
+
+📊 POLL / जनमत
+
+1. चंदा दिया? — ${v("q1")}
+2. समिति के सदस्य? — ${v("q2")}
+3. पंडाल में आना अच्छा लगता है? — ${v("q3")}
+4. कार्यक्रम अच्छे दिखाए जाते हैं? — ${v("q4")}
+5. कोई समिति सदस्य अनावश्यक बोलता है? — ${v("q5")}
+6. चंदौली के निवासी? — ${v("q6")}
+
+🙏 बहुत-बहुत धन्यवाद`;
+
+
+  document
+  .getElementById("success")
+  .style.display = "block";
+
+
+  window.open(
+    "https://wa.me/919696078769?text=" +
+    encodeURIComponent(msg),
+    "_blank"
+  );
+
+});
+
+</script>
+
+</body>
+</html>
